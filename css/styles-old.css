@@ -261,7 +261,7 @@ textarea {
 
 /* ================================Customers */
 
-.customers-item {
+/* .customers-item {
   width: 168px;
 }
 .customers-link {
@@ -289,7 +289,7 @@ textarea {
 .section-heading {
   margin-bottom: 72px;
   padding-top: 120px;
-}
+} */
 /* =========================== Portfolio ========================== */
 
 /* 📌 ============ projects */
@@ -397,45 +397,27 @@ textarea {
 
 /* 📌 === footer  */
 
-.page-footer {
-  padding: 100px 0;
-  background-color: var(--dark);
-}
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
-.logo-group {
-  width: 264px;
-  margin-right: 120px;
-}
-.logo-group > .text {
-  margin-top: 16px;
-  color: var(--accent);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
 /* ================================================== */
 .social-group {
-  width: 208px;
+  /* width: 208px; */
   margin-right: 80px;
 }
-.social-title {
+/* .social-title {
   display: inline-block;
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--accent);
-}
-.social-list {
+} */
+/* .social-list {
   display: flex;
   gap: 16px;
-}
-.social-item {
+} */
+/* .social-item {
   width: 40px;
-}
-.social-link {
+} */
+/* .social-link {
   height: 40px;
   border-radius: 50%;
   display: flex;
@@ -443,21 +425,21 @@ textarea {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-link:hover,
+} */
+/* .social-link:hover,
 .social-link:focus {
   background-color: var(--success);
-}
+} */
 /* ============================================================ */
-.subscription-group {
+/* .subscription-group {
   width: 453px;
-}
-.subscription-title {
+} */
+/* .subscription-title {
   color: var(--white-color);
   margin-bottom: 16px;
   font-weight: 500;
   line-height: 1.5;
-}
+} */
 .subscription-group-btn {
   display: flex;
 }
@@ -465,7 +447,7 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
-.subscribe-input {
+/* .subscribe-input {
   color: var(--white-color);
   background-color: var(--dark);
   min-width: 264px;
@@ -473,7 +455,7 @@ textarea {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 .subscribe-input::placeholder {
   padding-left: 16px;
 }
@@ -481,7 +463,7 @@ textarea {
 .subscribe-input:focus {
   border: 1px solid var(--primary-brand);
 }
-.subscribe-button {
+/* .subscribe-button {
   padding: 8px 24px;
   display: inline-flex;
   column-gap: 16px;
@@ -496,16 +478,16 @@ textarea {
   color: var(--white-color);
   background-color: var(--primary-brand);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.subscribe-button:hover,
+} */
+/* .subscribe-button:hover,
 .subscribe-button:focus {
   background-color: var(--pressed-state);
-}
-.telegram {
+} */
+/* .telegram {
   fill: var(--white-color);
 }
 .subscribe-text {
   display: flex;
 
   transform: translateY(-50%);
-}
+} */
