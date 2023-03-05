@@ -60,6 +60,7 @@ img {
 }
 /* ==================================================== */
 .container {
+  min-width: 428px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -261,24 +262,19 @@ img {
   margin-bottom: 72px;
   padding-top: 120px;
 }
-.customers-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 72px 16px;
-}
-.customers-item {
-  min-width: 190px;
-}
+
 /* =================footer ========== */
 .page-footer {
   padding-top: 96px;
   background-color: var(--dark);
 }
+.logo-group {
+  min-width: 268px;
+}
 
 .logo {
   display: block;
-  text-align: center;
+
   margin-bottom: 16px;
 }
 .text {
@@ -288,7 +284,6 @@ img {
   width: 208px;
 }
 .social-title {
-  text-align: center;
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.5;
@@ -396,6 +391,15 @@ img {
   .advantages-title {
     text-align: center;
   }
+  .customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 72px 16px;
+  }
+  .customers-item {
+    min-width: 190px;
+  }
 
   .footer-container {
     display: flex;
@@ -404,6 +408,12 @@ img {
   }
   .logo-group {
     width: 268px;
+  }
+  .logo {
+    text-align: center;
+  }
+  .social-group {
+    text-align: center;
   }
   .subscribe-input {
     min-width: 100%;
@@ -511,6 +521,10 @@ img {
     justify-content: center;
     gap: 72px 24px;
   }
+  .customers-item {
+    min-width: 168px;
+    margin-bottom: 96px;
+  }
 
   .footer-container {
     display: flex;
@@ -519,7 +533,6 @@ img {
   }
   .logo-group {
     margin-right: 24px;
-    margin-bottom: 112px;
   }
 
   .subscribe-form {
@@ -528,6 +541,9 @@ img {
   .subscribe-input {
     min-width: 264px;
     margin-right: 24px;
+  }
+  .page-footer {
+    padding-left: 108px;
   }
 }
 
@@ -541,9 +557,7 @@ img {
   .advantages-text {
     width: 356px;
   }
-  .footer-container {
-    padding-left: 108px;
-  }
+
   .logo-group {
     width: 264px;
   }
@@ -659,13 +673,4 @@ img {
   .social-group {
     margin-right: 24px;
   }
-
-  /* /* .footer-container {
-    display: flex;
-    align-items: baseline;
-  } */
-  /* .logo-group {
-    width: 264px;
-    margin-right: 120px;
-  } */
 }
