@@ -133,6 +133,7 @@ img {
   align-items: center;
   justify-content: center;
 }
+
 .hero {
   text-align: center;
 }
@@ -165,6 +166,206 @@ img {
 .hero-button:focus {
   background-color: var(--pressed-state);
 }
+/*==================== MODAL */
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-overlay);
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: calc(100% - 36px);
+
+  min-height: 586px;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  padding: 24px 16px;
+  background-color: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-clos {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--accent);
+  border-radius: 50%;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-clos:hover,
+.modal-clos:focus {
+  background-color: var(--pressed-state);
+  fill: var(--white-color);
+}
+.personal-caption {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+/* ======================================================== */
+
+.personal-data-text {
+  position: relative;
+
+  display: block;
+  margin-bottom: 8px;
+}
+.personal-text {
+  display: inline-block;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+
+  margin-bottom: 4px;
+}
+
+.contacts-form-imput {
+  padding-left: 38px;
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  color: var(--dark);
+}
+
+.contacts-form-imput:focus {
+  border: 1px solid var(--primary-brand);
+}
+.contacts-form-imput:focus + .user-name {
+  fill: var(--primary-brand);
+}
+
+.user-name {
+  position: absolute;
+  left: 16px;
+  bottom: 20px;
+  transform: translateY(50%);
+  pointer-events: none;
+  fill: var(--dark);
+}
+
+/* ============================================ */
+
+.contacts-form-comment {
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-form-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+
+.contacts-form-comment:focus {
+  border: 1px solid var(--primary-brand);
+}
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* ================checkbox================== */
+.privacy-statement {
+  height: 16px;
+  width: 360px;
+  margin-bottom: 24px;
+}
+.personal-checkbox {
+  display: inline-flex;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #757575;
+}
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+.checkbox-icons {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid var(--dark);
+  border-radius: 4px;
+}
+.checkbox-text {
+  font-weight: 400;
+  display: flex;
+}
+
+.checkbox:checked + .checkbox-icons {
+  border-color: var(--pressed-state);
+  background-color: var(--pressed-state);
+  background-image: url(../images/full-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.privacy-policy {
+  color: var(--primary-brand);
+  margin-left: 2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-policy:hover,
+.privacy-policy:focus {
+  color: var(--pressed-state);
+}
+.contacts-btn {
+  text-align: center;
+}
+.contacts-form-btn {
+  color: var(--white-color);
+  height: 56px;
+  width: 169px;
+  background: var(--primary-brand);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-form-btn:focus,
+.contacts-form-btn:hover {
+  background-color: var(--pressed-state);
+}
+
 /* ============= advantages =========================== */
 .advantages-section {
   padding: 96px 0;
@@ -399,6 +600,9 @@ img {
   .container {
     width: 426px;
   }
+  .modal {
+    width: 392px;
+  }
 }
 
 @media screen and (max-width: 765px) {
@@ -507,6 +711,17 @@ img {
   .button-menu {
     display: none;
   }
+  /* .hero-title {
+    width: 1200px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/people-office-tablet.jpg);
+  } */
+  .modal {
+    width: 408px;
+  }
 
   .advantages-list {
     display: flex;
@@ -556,7 +771,8 @@ img {
     min-width: 264px;
     margin-right: 24px;
   }
-  .page-footer {
+
+  .footer-container {
     padding-left: 108px;
   }
 }
@@ -666,16 +882,17 @@ img {
     justify-content: space-between;
   }
   .page-footer {
-    padding: 100px 0;
+    padding-bottom: 100px;
   }
   .footer-container {
     display: flex;
     flex-wrap: nowrap;
+    padding-left: 0;
   }
   .logo-group {
     margin-right: 120px;
   }
   .social-group {
-    margin-right: 24px;
+    margin-right: 80px;
   }
 }
