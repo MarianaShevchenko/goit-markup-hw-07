@@ -586,15 +586,93 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-/* ==========
-  М
-  О
-  Б
-  И
-  Л
-  К
-  А
-  ================== */
+.projects-list {
+  width: 100%;
+  justify-items: center;
+}
+.filter-button {
+  padding: 12px 24px;
+  color: var(--primary-brand);
+  font-family: inherit;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background-color: var(--white-color);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter-button:hover,
+.filter-button:focus {
+  border-color: transparent;
+  background-color: var(--pressed-state);
+  color: var(--white-color);
+}
+.projects-item {
+  width: 360px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+.projects-img {
+  display: block;
+}
+
+.projects-img:hover,
+.projects-img:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.projects-img:hover .overlay {
+  transform: translateY(0);
+}
+.projects-wraper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--light);
+  position: absolute;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  top: 0;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--primary-brand);
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+.projects-bottom {
+  padding: 32px 16px;
+  border-left: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.projects-title {
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+.projects-description {
+  color: var(--text);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* \======================================
+============================ */
+
+/* ============== M O B I L K A  */
 
 @media screen and (min-width: 426px) {
   .container {
@@ -642,11 +720,27 @@ textarea {
   .subscription-title {
     text-align: center;
   }
+  .projects-section {
+    padding-top: 48px;
+  }
+  .filter-list {
+    flex-wrap: wrap;
+    display: flex;
+
+    column-gap: 24px;
+  }
+  .filter-item {
+    column-gap: 24px;
+    margin-bottom: 16px;
+  }
+  .projects-item {
+    margin-bottom: 48px;
+  }
 }
 
 /* ==================П Л А Н Ш Е Т==================*/
 
-@media screen and (min-width: 766px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 766px;
   }
@@ -711,16 +805,16 @@ textarea {
   .button-menu {
     display: none;
   }
-  /* .hero-title {
-    width: 1200px;
+
+  .modal {
+    width: 408px;
+  }
+  .hero-wrapper {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/people-office-tablet.jpg);
-  } */
-  .modal {
-    width: 408px;
+      url('../images/hero/people-office-tablet.jpg');
   }
 
   .advantages-list {
@@ -730,6 +824,9 @@ textarea {
   .advantages-item {
     width: 356px;
   }
+  /* =========================================================
+  ================================
+  /* ================================ */
 
   /* ============Our Team========== */
   .team-list {
@@ -775,6 +872,26 @@ textarea {
   .footer-container {
     padding-left: 108px;
   }
+
+  .filter-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 64px;
+  }
+  .projects-list {
+    padding-bottom: 96px;
+
+    gap: 72px 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .projects-item :last-child {
+    gap: none;
+  }
+  .projects-item {
+    width: 356px;
+  }
 }
 
 @media screen and (max-width: 1157px) {
@@ -787,9 +904,13 @@ textarea {
   .advantages-top {
     display: none;
   }
+  .projects-section {
+    padding-top: 64px;
+  }
 }
 
 /* ================= Н О У Т Б У К ============================= */
+
 @media screen and (min-width: 1158px) {
   .container {
     width: 1158px;
@@ -807,6 +928,17 @@ textarea {
     padding-top: 24px;
     padding-bottom: 24px;
   }
+  .hero-wrapper {
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero/people-office-desktop.jpg');
+  }
+
   .advantages-section {
     padding: 120px 0 60px;
   }
@@ -895,4 +1027,15 @@ textarea {
   .social-group {
     margin-right: 80px;
   }
+  .projects-section {
+    padding-top: 100px;
+  }
+  .projects-list {
+    gap: 48px 24px;
+    padding-bottom: 120px;
+  }
 }
+/* =================================================== */
+/* ===================================================
+===============================================
+ /* */
