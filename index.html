@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -53,14 +53,85 @@
             </li>
           </ul>
         </address>
+        <!-- ================================================================= -->
         <button
           type="button"
-          class="button-menu js-open-menu"
+          class="button-menu"
+          data-menu-open
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
           <svg width="32" height="22">
             <use href="./images/icons.svg#icon-menu" />
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" id="mobile-menu" data-menu>
+        <nav class="navigation-mob">
+          <div class="wrapper-navigation-mob">
+            <ul class="mob-menu-list">
+              <li class="mob-menu-item">
+                <a href="./index.html" class="link current">Studio</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="./portfolio.html" class="link current">Portfolio</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="" class="link">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <address class="contacts-wrapper-mob">
+          <div class="wrapper-mob">
+            <ul class="contacts-mob">
+              <li class="contacts-item-mob">
+                <a href="tel:+110001111111" class="contacts-link-tel"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contacts-item-mob">
+                <a href="mailto:info@devstudio.com" class="contacts-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </address>
+        <ul class="soc-icon-menu">
+          <li class="icon-list-menu">
+            <a class="icon-item" href="">
+              <svg class="soc-icon-item" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="icon-listicon-list-menu">
+            <a class="icon-item" href="">
+              <svg class="soc-icon-item" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter" />
+              </svg>
+            </a>
+          </li>
+          <li class="icon-listicon-list-menu">
+            <a class="icon-item" href=""
+              ><svg class="soc-icon-item" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook" />
+              </svg>
+            </a>
+          </li>
+          <li class="icon-listicon-list-menu">
+            <a class="icon-item" href=""
+              ><svg class="soc-icon-item" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <button class="menu-close" data-menu-close type="button">
+          <svg class="modal-clos-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-Vector-1" />
           </svg>
         </button>
       </div>
@@ -144,23 +215,40 @@
           <ul class="work-list">
             <li class="work-item">
               <img
-                src="./images/what-are-we-doing-1.jpg"
-                alt="work 1"
+                srcset="
+                  ./images/directions/desktop@2x.jpg 2x,
+                  ./images/directions/desktop.webp
+                "
+                src="./images/directions/desktop.jpg"
+                alt="Desktop"
                 width="360"
+                height="300"
               />
             </li>
+
             <li class="work-item">
               <img
-                src="./images/what-are-we-doing-2.jpg"
-                alt="work 2"
+                srcset="
+                  ./images/directions/mobile@2x.jpg 2x,
+                  ./images/directions/mobile.webp
+                "
+                src="./images/directions/mobile.jpg"
+                alt="Mobile"
                 width="360"
+                height="300"
               />
             </li>
+
             <li class="work-item">
               <img
-                src="./images/what-are-we-doing-3.jpg"
-                alt="work 3"
+                srcset="
+                  ./images/directions/design@2x.jpg 2x,
+                  ./images/directions/design.webp
+                "
+                src="./images/directions/design.jpg"
+                alt="Design"
                 width="360"
+                height="300"
               />
             </li>
           </ul>
@@ -174,13 +262,10 @@
           <ul class="team-list">
             <li class="team-item">
               <img
-                srcset="./images/personal/product-desinger@2x.jpg 2x"
-                src="./images/personal/product-desinger.jpg"
-                alt="Product Designer Mark Guerrero"
+                src="./images/our-team-1.jpg"
+                alt="Mark Guerrero"
                 width="264"
-                height="260"
               />
-
               <div class="staff-wrapper">
                 <h3 class="staff-title">Mark Guerrero</h3>
                 <p class="staff-position">Product Designer</p>
@@ -218,13 +303,7 @@
             </li>
 
             <li class="team-item">
-              <img
-                srcset="./images/personal/frontend-developer@2x.jpg 2x"
-                src="./images/personal/frontend-developer.jpg"
-                alt="Frontend Developer Tom Ford"
-                width="264"
-                height="260"
-              />
+              <img src="./images/our-team-2.jpg" alt="Tom Ford" width="264" />
               <div class="staff-wrapper">
                 <h3 class="staff-title">Tom Ford</h3>
                 <p class="staff-position">Frontend Developer</p>
@@ -263,11 +342,9 @@
 
             <li class="team-item">
               <img
-                srcset="./images/personal/marketing@2x.jpg 2x"
-                src="./images/personal/marketing.jpg"
-                alt="Marketing Camila Garcia"
+                src="./images/our-team-3.jpg"
+                alt="Camila Garcia"
                 width="264"
-                height="260"
               />
               <div class="staff-wrapper">
                 <h3 class="staff-title">Camila Garcia</h3>
@@ -306,11 +383,9 @@
             </li>
             <li class="team-item">
               <img
-                srcset="./images/personal/ui-designer@2x.jpg 2x"
-                src="./images/personal/ui-designer.jpg"
-                alt="UI Designer Daniel Wilson"
+                src="./images/our-team-4.jpg"
+                alt="Daniel Wilson"
                 width="264"
-                height="260"
               />
               <div class="staff-wrapper">
                 <h3 class="staff-title">Daniel Wilson</h3>
@@ -535,12 +610,16 @@
               placeholder="Text input"
             ></textarea>
           </label>
-
-          <!-- --------------------checkbox============= -->
-
+          <!-- ====================================================================== -->
           <div class="privacy-statement">
             <label class="personal-checkbox">
-              <input class="checkbox" type="checkbox" name="" value="" id="" />
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="checkbox"
+                value="checkbox"
+                id="checkbox"
+              />
               <span class="checkbox-icons"></span>
               <span class="checkbox-text">
                 I accept the terms and conditions of the
