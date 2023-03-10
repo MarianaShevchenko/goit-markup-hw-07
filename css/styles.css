@@ -40,6 +40,7 @@ button {
   cursor: pointer;
 }
 img {
+  max-width: 100%;
   display: block;
 }
 
@@ -389,7 +390,7 @@ textarea {
   width: 24px;
   height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--accent);
+  background-color: var(--white-color);
   border-radius: 50%;
   margin-bottom: 24px;
   display: flex;
@@ -788,7 +789,6 @@ textarea {
   color: var(--white-color);
 }
 .projects-item {
-  width: 360px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .projects-img {
@@ -910,7 +910,7 @@ textarea {
   }
 }
 
-/* ================================================================================ */
+/* =========================== T A B L E T===================================================== */
 
 @media screen and (min-width: 768px) {
   .container {
@@ -1061,9 +1061,6 @@ textarea {
     flex-wrap: wrap;
   }
 
-  .projects-item :last-child {
-    gap: none;
-  }
   .projects-item {
     width: 356px;
   }
@@ -1087,7 +1084,7 @@ textarea {
   }
 }
 
-/* ================= Н О У Т Б У К ============================= */
+/* ================= D E S K T O P ============================= */
 
 @media screen and (min-width: 1158px) {
   .container {
@@ -1223,5 +1220,9 @@ textarea {
   }
   .filter-item:not(:last-child) {
     margin-right: 24px;
+  }
+
+  .projects-item {
+    width: 360px;
   }
 }
