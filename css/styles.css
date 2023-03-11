@@ -101,6 +101,9 @@ img {
   stroke: var(--dark);
   display: block;
 }
+.button-menu > svg {
+  display: block;
+}
 .menu-container {
   position: fixed;
   top: 0;
@@ -147,7 +150,6 @@ img {
   letter-spacing: 0.02em;
   margin-bottom: 72px;
   display: block;
-  display: flex;
 }
 .hero-button {
   background-color: var(--primary-brand);
@@ -423,9 +425,6 @@ textarea {
   margin-bottom: 48px;
 }
 
-.contacts-item-mob:not(:last-child) {
-  margin-bottom: 40px;
-}
 .contacts-item-mob {
   display: inline-block;
   display: block;
@@ -443,7 +442,7 @@ textarea {
   flex-grow: 0;
   color: #4d5ae5;
 }
-.contacts-link {
+.contacts-link-mob {
   display: block;
   font-family: 'Roboto';
   font-style: normal;
@@ -451,14 +450,10 @@ textarea {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #434455;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  color: #434455;
+  color: var(--text);
 }
-*/ .contacts-item-mob > .contacts-link {
-  color: #434455;
+.contacts-item-mob:not(:last-child) {
+  margin-bottom: 40px;
 }
 .soc-icon-menu {
   display: flex;
@@ -543,23 +538,24 @@ textarea {
   padding: 96px 0;
 }
 .advantages-title {
-  color: var(--dark);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
   letter-spacing: 0.02em;
+  color: var(--dark);
   margin-bottom: 8px;
 }
 .advantages-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 75px;
 }
 
 /* <!--📌========= Our Team  */
 .our-team {
+  padding: 96px 0;
   background-color: var(--light);
-  padding: 120px 0;
 }
 .team-list {
   display: flex;
@@ -567,6 +563,11 @@ textarea {
   align-items: center;
 }
 .section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
   text-align: center;
   margin-bottom: 72px;
 }
@@ -576,7 +577,6 @@ textarea {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background-color: var(--white-color);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 72px;
 }
 
 .staff-wrapper {
@@ -622,6 +622,11 @@ textarea {
 .customers {
   padding: 96px 0;
 }
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px 16px;
+}
 .customers-item {
   width: calc((100% - 16px) / 2);
 }
@@ -659,18 +664,16 @@ textarea {
 }
 .logo-group {
   min-width: 268px;
+  margin-bottom: 72px;
 }
 
 .logo {
   display: block;
+}
 
-  margin-bottom: 16px;
-}
-.text {
-  margin-bottom: 72px;
-}
 .social-group {
   width: 208px;
+  margin-bottom: 72px;
 }
 .social-title {
   margin-bottom: 16px;
@@ -681,8 +684,7 @@ textarea {
 }
 .social-list {
   display: flex;
-  gap: 24px;
-  margin-bottom: 72px;
+  gap: 16px;
 }
 .social-item {
   width: 40px;
@@ -702,6 +704,7 @@ textarea {
 }
 .subscription-group {
   width: 100%;
+  padding-bottom: 96px;
 }
 .subscription-title {
   color: var(--white-color);
@@ -712,7 +715,6 @@ textarea {
 }
 .subscribe-form {
   text-align: center;
-  padding-bottom: 96px;
 }
 
 .subscribe-button {
@@ -862,21 +864,18 @@ textarea {
   }
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
   .navigation-list {
     display: none;
   }
   .contacts-wrapper {
     display: none;
   }
+  .advantages-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
   .advantages-title {
     text-align: center;
-  }
-  .customers-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 72px 16px;
   }
   .footer-container {
     display: flex;
@@ -903,6 +902,7 @@ textarea {
     padding-top: 48px;
   }
   .filter-list {
+    margin-bottom: 48px;
     flex-wrap: wrap;
     display: flex;
 
@@ -915,6 +915,9 @@ textarea {
   .projects-item {
     margin-bottom: 48px;
   }
+  .team-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
 }
 
 /* =========================== T A B L E T===================================================== */
@@ -924,11 +927,6 @@ textarea {
     width: 766px;
   }
 
-  .contacts-link {
-    display: block;
-    row-gap: 6px;
-  }
-
   .navigation {
     display: flex;
     align-items: center;
@@ -936,12 +934,13 @@ textarea {
   .navigation-list {
     display: flex;
     margin-left: 76px;
-    padding: 24px 0;
   }
   .navigation-list .item + .item {
     margin-left: 40px;
   }
   .navigation-list .link {
+    display: inline-block;
+    padding: 24px 0;
     color: var(--dark);
     font-weight: 500;
     font-size: 16px;
@@ -959,7 +958,7 @@ textarea {
     width: 100%;
     height: 4px;
     left: 0;
-    bottom: -26px;
+    bottom: -1px;
     display: block;
     content: '';
     position: absolute;
@@ -968,12 +967,14 @@ textarea {
     pointer-events: none;
   }
   .contacts-link {
+    font-family: 'Roboto';
     color: var(--text);
     font-style: normal;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.15;
+    font-weight: 400;
     letter-spacing: 0.02em;
-    display: inline-block;
+    display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .contacts-link:hover,
@@ -1001,6 +1002,7 @@ textarea {
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 72px 24px;
   }
   .advantages-item {
     width: 356px;
@@ -1016,22 +1018,20 @@ textarea {
     flex-direction: row;
     justify-content: center;
   }
-  .team-item:not(:last-child) {
-    margin-right: 24px;
-  }
-  .team-item {
-    margin-bottom: 64px;
+  .team-list {
+    gap: 64px 24px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .customers-list {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    flex-direction: row;
-    justify-content: center;
     gap: 72px 24px;
+    justify-content: center;
   }
   .customers-item {
     width: 168px;
-    margin-bottom: 96px;
+  }
+  .team-list-customers {
+    margin-bottom: 72px;
   }
 
   .footer-container {
@@ -1051,18 +1051,13 @@ textarea {
     margin-right: 24px;
   }
 
-  .footer-container {
-    padding-left: 108px;
-  }
-
   .filter-list {
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 64px;
+    margin-bottom: 64px;
   }
   .projects-list {
     padding-bottom: 96px;
-
     gap: 72px 24px;
     display: flex;
     flex-wrap: wrap;
@@ -1089,8 +1084,16 @@ textarea {
   .projects-section {
     padding-top: 64px;
   }
+  .contacts-item:not(:last-child) {
+    margin-bottom: 12px;
+  }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    width: 582px;
+  }
+}
 /* ================= D E S K T O P ============================= */
 
 @media screen and (min-width: 1158px) {
@@ -1107,8 +1110,8 @@ textarea {
     margin-left: 40px;
   }
   .contacts-link {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.5;
   }
   .hero-wrapper {
     height: 600px;
@@ -1123,19 +1126,22 @@ textarea {
   .advantages-section {
     padding: 120px 0 60px;
   }
-  .advantages-list {
+  /* .advantages-list {
     display: flex;
-  }
+  } */
   .advantages-item {
     width: 264px;
   }
-  .advantages-item:not(:last-child) {
+  /* .advantages-item:not(:last-child) {
     margin-right: 24px;
-  }
-  */
-/* =========================================================================== */
+  } */
+  /* .advantages-item {
+    gap: 24px 72px;
+  } */
 
- .advantages-top {
+  /* =========================================================================== */
+
+  .advantages-top {
     height: 112px;
     margin-bottom: 8px;
     border-radius: 4px;
@@ -1144,7 +1150,7 @@ textarea {
     align-items: center;
     background-color: var(--light);
   }
-  */ .advantages-title {
+  .advantages-title {
     color: var(--dark);
     font-weight: 500;
     font-size: 20px;
@@ -1168,9 +1174,9 @@ textarea {
   .advantages-item {
     width: 264px;
   }
-  .advantages-item:not(:last-child) {
+  /* .advantages-item:not(:last-child) {
     margin-right: 24px;
-  }
+  } */
   .work-section {
     display: block;
     padding: 60px 0 120px;
@@ -1188,20 +1194,11 @@ textarea {
   .customers {
     padding: 120px 0;
   }
-  .customers-item {
-    row-gap: 24;
-  }
-  .customers-list {
-    display: flex;
-    justify-content: space-between;
-  }
   .page-footer {
     padding-bottom: 100px;
   }
   .footer-container {
-    display: flex;
     flex-wrap: nowrap;
-    padding-left: 0;
   }
   .logo-group {
     margin-right: 120px;
@@ -1215,9 +1212,6 @@ textarea {
   .projects-list {
     gap: 48px 24px;
     padding-bottom: 120px;
-  }
-  .projects-section {
-    padding: 96px 0 120px;
   }
 
   .filter-list {
